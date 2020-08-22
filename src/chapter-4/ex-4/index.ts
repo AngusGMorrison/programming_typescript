@@ -16,4 +16,4 @@ function logArray(...args: unknown[]) {
 }
 
 call(logArray, 1, "hello", 10, null); // valid
-call(logArray, 1, 2, "hello", 3); // compile-time error
+call(logArray, 1, 2, "hello", 3); // compile-time

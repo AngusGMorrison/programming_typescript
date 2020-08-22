@@ -1,12 +1,9 @@
 // Implement a small typesafe assertion library. Start by sketching
 // out your types.
 
-type Assertion = <T>(first: T, second: T, ...rest: T[]) => boolean;
+type Assertion = <T>(first: T, ...rest: [T, ...T[]]) => boolean;
 
-const is: Assertion = (first, second, ...rest) => {
-  if (first !== second) {
-    return false;
-  }
+const is: Assertion = (first, ...rest) => {
   return rest.every(l => l === first);
 };
 
